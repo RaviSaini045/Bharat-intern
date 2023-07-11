@@ -14,11 +14,15 @@
             margin: 0;
             padding: 0;
         }
-
+        
         body {
             background-color: rgb(2, 5, 36);
             color: rgb(244, 240, 240);
             font-family: 'Poppins', sans-serif;
+        }
+        :root{
+            --bg-color:rgb(45, 25, 99);
+            --second-bg-color:rgb(47, 34, 78);
         }
         nav{
             display: flex;
@@ -48,10 +52,10 @@
             border: 0;
             background: rgb(123, 91, 151);
             height: 1.5px;
-            margin: 60px 84px;
+            margin: 80px 80px;
         }
         .left{
-            font-size: 1.5rem;
+            font-size: 2rem;
         }
         .firstSection{
            display: flex;
@@ -99,7 +103,7 @@
             margin: 3rem 1rem 2rem 0;
         }
         .social-media a:hover{
-            background-color: rgb(116, 105, 179);
+            background-color: rgb(193, 34, 26);
         }
         .btn{
             display: inline-block;
@@ -109,27 +113,182 @@
             font-size: 1.25rem;
             font-weight: 500;
         }
-        .about-section > div{
-            width: 30%;
+        .btn :hover{
+          box-shadow: none;
         }
-        .image{
-            width: 60%;
+       
+        .about{
             display: flex;
-            background-color: rgb(2, 5, 36);
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
         }
-        .image img{
-            height: 600px;
-            width: 600px;
+       
+        .about-image img{
+            height: 35vw;
+            width: 35vw;
             border-radius: 50%;
             border: 8px solid #d7cccc;
             
         }
         
-        .about-image {
-           
-           font-size: 3rem;
-       }
+        .heading{
+            text-align: center;
+            font-size: 4.5rem;
+        }
+        
+        .about-content h2{
+            text-align: left;
+            line-height: 1.3;
+        }
+        .about-content h3{
+            font-size: 2.5rem;
+        }
+        .about-content p{
+            font-size: 1.5rem;
+            margin: 2rem 0 3rem;
+        }
+
+        .services h2 {
+          margin-bottom: 3rem;
+          margin-top: 3rem;
+        }
+        .services-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .services-container .services-box{
+            padding: 3rem 2rem 3rem;
+            background: vat(--main--color);
+            border-radius: 2rem;
+            border-color: #9473b7;
+            text-align: center;
+            border: 0.3rem solid;
+            margin: 1.2rem;
+        }
+        .services-container .services-box:hover{
+            border-color: red;
+            
+        }
+        .services-box i{
+            font-size: 5rem;
+        }
+        .services-box h3{
+            font-size: 2rem;
+        }
+        .services-box p{
+            font-size: 1.4rem;
+        }
+
+        .project h2{
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+        .project-container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            align-items: center;
+            gap: 2.5rem;
+        }
+        .project-container .project-box img{
+          position: relative;
+          border-radius: 2rem;
+          overflow: hidden;
+          display: flex;
+        }
+
+        .project-box img{
+            height: 20vw;
+            width: 20vw;
+            transition: 0.5s;
+        }
+        .project-box:hover img
+        {
+            transform:scale(1.1);
+        }
+        .project-layer h4{
+           font-size: 2rem;
+           margin-top: 1.5rem;
+        }
+        .project-layer p{
+            font-size: 1rem;
+            /* margin: 1.2rem 0 1rem; */
+            margin-top: 1rem;
+        }
+        .project-layer a{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background: var(--text-color);
+
+        }
+        .project-layer a i{
+            font-size: 2rem;
+        }
+        .contact h2{
+            margin-bottom: 1.5rem;
+        }
+        .contact form{
+            max-width: 70rem;
+            margin: 1rem auto;
+            text-align: center;
+            margin-bottom: 1.75rem;
+        }
+        .contact form .input-box{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 1.25rem;
+        }
+        .contact form .input-box input, .contact form textarea{
+            width: 100%;
+            padding: 1.5rem;
+            font-size: 1.25rem;
+            color: rgb(112, 85, 154);
+            background: var(--second-bg-color);
+            border-radius: 0.8rem;
+            margin: 0.7rem,0;
+        }
+        .contact form .input-box input{
+            width: 45%;
+        }
+        .contact form textarea{
+            resize: none;
+        }
+        .contact form .btn{
+            margin-bottom: 12rem;
+            margin-top: 1.25rem;
+           cursor: pointer;
+        }
        
+        .footer{
+            display: flex;
+            justify-content:space-around ;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 2rem 10%;
+            background: var(--second-bg-color);
+            border-radius: 0.8rem;
+        }
+        .footer-text p {
+            font-size: 1.5rem;
+        }
+        .footer-icon a{
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem;
+          background: white;
+          border-radius: 0.8rem;
+        }
+        .footer-icon a i{
+            font-size:2.5rem ;
+
+        }
     </style>
 </head>
 
@@ -139,11 +298,11 @@
             <div class="left">Ravi's Portfolio</div>
             <div class="right">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contacts</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -152,14 +311,14 @@
         <section class="firstSection" id="home">
             <div class="leftSection">
                Hello My name is <span class="purple"> RAVI SAINI</span>
-               <div>I am a Pesionate</div>
+               <div>I am a Passionate</div>
                <span id="element"></span>
                <div class="social-media">
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
-               </div>
+               </div >
                <a href="#" class="btn">Download resume</a>
             </div>
             <div class="rightSection">
@@ -167,18 +326,131 @@
             </div>
         </section>
         <hr>
-        <section class="about-section" id="about">
-            <div class="image">
-                <img src="new.png" alt="">
+        <section class="about" id="about">
+            <div class="about-image">
+                <img src="ravi.png" alt="">
             </div>
-            <div class="about-img">
-                 <h2 class="heading">About<span>e</span></h2>
-                 <h3>Frontend Developer</h3>
+            <div class="about-content">
+                 <h2 class="heading">About Me</h2>
+                 <h3>Frontend Developer</h3><br>
                  <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed cum doloremque dolore delectus corporis totam similique molestiae aspernatur magnam, in amet inventore consequuntur tempora, molestias quas modi pariatur soluta laboriosam? Aperiam provident quam enim nesciunt tempora veritatis ad. Itaque exercitationem minus sed doloribus dignissimos fuga modi omnis cum earum iure?
-                 </p>
+                    I am a skilled frontend web developer with a passion for creating exceptional user experiences. With a solid foundation in HTML, CSS, and JavaScript, I specialize in building responsive and user-friendly websites and web applications.
+                 </p><br>
+                 <a href="#" class="btn">Read More..</a>
             </div>
         </section>
+        <hr>
+        <section class="services" id="services">
+          <h2 class="heading">Our Services</h2>
+
+          <div class="services-container">
+           
+
+            <div class="services-box">
+                <i class="fa-solid fa-code"></i>
+                <h3>Web Development</h3><br>
+                <p>Our web development services encompass a comprehensive range of solutions to meet the diverse needs of our clients. We specialize in creating high-quality, visually appealing, and fully functional websites and web applications.</p>
+                <a href="#" class="btn">Read More..</a>
+            </div>
+            
+            <div class="services-box">
+                <i class="fa-solid fa-video"></i>
+                <h3>Video Editing</h3><br>
+                <p>Our video editing services are designed to provide professional and high-quality editing solutions for various video projects. We offer a range of services to cater to different needs and requirements.  </p>
+                <a href="#" class="btn">Read More..</a>
+                
+            </div>
+
+            <div class="services-box">
+                <i class="fa-regular fa-medal"></i>
+                <h3>Sports academy</h3>
+                <p> we are dedicated to providing comprehensive training and development programs for athletes of all levels. Our sports academy focuses on nurturing talent, enhancing skills, and promoting a culture of excellence in sports. </p>
+                <a href="#" class="btn">Read More..</a>
+                
+            </div>
+          </div>
+        </section>
+        <hr>
+        <section class="projects" id="projects">
+           <h2 class="heading">My Projects</h2>
+
+           <div class="project-container">
+            <div class="project-box">
+                <img src="project 1.jpeg" alt="">
+                <div class="project-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dolore?</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="project 2.jpg" alt="">
+                <div class="project-layer">
+                    <h4>App Design</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dolore?</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="project 3.png" alt="">
+                <div class="project-layer">
+                    <h4>M L Project</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dolore?</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="project 4.jpg" alt="">
+                <div class="project-layer">
+                    <h4>Api Model</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dolore?</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="project 5.png" alt="">
+                <div class="project-layer">
+                    <h4>ETH Blockchain</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dolore?</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="project 6.jpeg" alt="">
+                <div class="project-layer">
+                    <h4>DAPP</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dolore?</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+           </div>
+        </section>
+        <hr>
+        <section class="contact" id="contact">
+            <h2 class="heading">Contact Us !</h2>
+
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email Address">
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Mobile Number">
+                    <input type="text" placeholder="Email subject">
+                </div>
+                <textarea name="" id="" cols="10" rows="20" placeholder="Your Message"></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </form>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-text">
+                <p> Copyrights &copy; 2023 by Ravi Saini  |  All Rights Reserved</p>
+            </div>
+            <div class="footer-icon">
+                <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </footer>
     </main>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
