@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(2, 5, 36);
+            color: rgb(244, 240, 240);
+            font-family: 'Poppins', sans-serif;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around ;
+             align-items: center;
+             height: 90px;
+             background-color: rgb(45, 25, 99);
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li{
+            list-style: none;
+            margin: 0 23px;
+        }
+        nav ul li a{
+            list-style: none;
+            color: white;
+        }
+        nav ul li a:hover{
+            color: rgb(161, 60, 60);
+            font-size: 1.04rem;
+        }
+
+        main hr{
+            border: 0;
+            background: rgb(123, 91, 151);
+            height: 1.5px;
+            margin: 60px 84px;
+        }
+        .left{
+            font-size: 1.5rem;
+        }
+        .firstSection{
+           display: flex;
+           justify-content: space-around;
+           margin: 100px 0;
+           align-items: center;
+        }
+        .firstSection > div{
+           width: 30%;
+        }
+        .leftSection {
+           
+            font-size: 3rem;
+        }
+        .rightSection img{
+            width: 80%;
+        }  
+        .purple{
+            color: rgb(99, 35, 160);
+        }
+        .text-gray{
+            color: gray;
+        }
+        #element{
+            color: rgb(99, 35, 160);
+        }
+        .about{
+            max-width: 75vw;
+            margin: auto;
+            height: 80vh;
+        }
+       
+        .social-media a{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 2rem;
+            height: 2rem;
+            background: transparent;
+            border: 1.04rem solid;
+            border-color: rgb(90, 78, 104);
+            border-radius: 30%;
+            font-size: 1.4rem;
+            color: var(--main--color);
+            margin: 3rem 1rem 2rem 0;
+        }
+        .social-media a:hover{
+            background-color: rgb(116, 105, 179);
+        }
+        .btn{
+            display: inline-block;
+            padding: 1rem 1.5rem;
+            background: white;
+            border-radius: 4rem;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+        .about-section > div{
+            width: 30%;
+        }
+        .image{
+            width: 60%;
+            display: flex;
+            background-color: rgb(2, 5, 36);
+        }
+        .image img{
+            height: 600px;
+            width: 600px;
+            border-radius: 50%;
+            border: 8px solid #d7cccc;
+            
+        }
+        
+        .about-image {
+           
+           font-size: 3rem;
+       }
+       
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Ravi's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contacts</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection" id="home">
+            <div class="leftSection">
+               Hello My name is <span class="purple"> RAVI SAINI</span>
+               <div>I am a Pesionate</div>
+               <span id="element"></span>
+               <div class="social-media">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+               </div>
+               <a href="#" class="btn">Download resume</a>
+            </div>
+            <div class="rightSection">
+                <img src="vr.png" alt="" >
+            </div>
+        </section>
+        <hr>
+        <section class="about-section" id="about">
+            <div class="image">
+                <img src="new.png" alt="">
+            </div>
+            <div class="about-img">
+                 <h2 class="heading">About<span>e</span></h2>
+                 <h3>Frontend Developer</h3>
+                 <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed cum doloremque dolore delectus corporis totam similique molestiae aspernatur magnam, in amet inventore consequuntur tempora, molestias quas modi pariatur soluta laboriosam? Aperiam provident quam enim nesciunt tempora veritatis ad. Itaque exercitationem minus sed doloribus dignissimos fuga modi omnis cum earum iure?
+                 </p>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Web Developer', 'Video Editor','Football Player','Blockchain Explorer'],
+          typeSpeed: 50,
+        });
+      </script>
+</body>
+
+</html>
